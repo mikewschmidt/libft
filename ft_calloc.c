@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/19 15:14:58 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/27 18:10:45 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:02:10 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ptr = (void*)malloc(size * nmemb);
 	if (!ptr)
 		return (NULL);
-	ft_memset(ptr, 0,  nmemb);
+	ft_memset(ptr, 0, nmemb);
 	return (ptr);
 }

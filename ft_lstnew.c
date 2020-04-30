@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 16:44:19 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/21 21:17:52 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/29 21:55:46 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ t_list	*ft_lstnew(void *content)
 	if (!lst)
 		return (NULL);
 	lst->content = content;
+	lst->next = NULL;
 	return (lst);
 }

@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 22:37:19 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/21 23:00:08 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:05:01 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*after;
 
 	if (!lst || !*lst || !del)
-		return;
+		return ;
 	curr = *lst;
 	while (curr)
 	{

@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/23 19:58:04 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/27 18:01:47 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/29 15:26:23 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,13 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	end = ft_strlen(s1) - 1;
-	while (chrcheck(s1[start], set) && s1[start] != '\0')
+	while (chrcheck(s1[start], set))
 		start++;
 	while (chrcheck(s1[end], set) && start < end)
 		end--;
-	if (start < end)
-	{
-		ptr = (char*)malloc((end - start + 2) * sizeof(char));
-		if (!ptr)
-			return (NULL);
-		ft_strlcpy(ptr, &s1[start], (end - start + 2)); 
-		return (ptr);
-	}
-	return ("");
+	ptr = (char*)ft_calloc((end - start + 2), sizeof(char));
+	if (!ptr)
+		return (NULL);
+	ft_strlcpy(ptr, &s1[start], (end - start + 2));
+	return (ptr);
 }

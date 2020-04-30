@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/25 21:39:20 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/03/11 12:23:21 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:33:37 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@
 void	ft_putstr_fd(char const *s, int fd)
 {
 	if (!s || !fd)
-		return;
+		return ;
 	write(fd, s, ft_strlen(s));
 }

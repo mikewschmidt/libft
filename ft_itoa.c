@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/03 14:10:41 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/03/04 13:00:19 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:45:29 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,17 @@ static int	charcnt(int n)
 		cnt++;
 	while (n != 0)
 	{
-		n = n/10;
+		n = n / 10;
 		cnt++;
 	}
 	return (cnt);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
-	int	sign;
-	int	cnt;
+	int		sign;
+	int		cnt;
 	char	*str;
-
 
 	sign = 1;
 	if (n < 0)
@@ -46,8 +45,7 @@ char	*ft_itoa(int n)
 	while (cnt--)
 	{
 		str[cnt] = ((n % 10) * sign) + '0';
-		n = n/10;
-
+		n = n / 10;
 	}
 	if (sign == -1)
 		str[0] = '-';

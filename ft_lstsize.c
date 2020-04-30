@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 17:10:19 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/21 17:10:19 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:05:54 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	int	cnt;
+	int		cnt;
 	t_list	*temp;
 
 	cnt = 0;

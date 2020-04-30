@@ -6,15 +6,15 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 14:45:46 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/18 14:45:46 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/04/28 19:37:51 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		i;
+	int				i;
 	unsigned char	*c1;
 	unsigned char	*c2;
 
@@ -30,5 +30,4 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	else
 		return (c1[i] - c2[i]);
-	
 }
