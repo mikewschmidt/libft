@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 15:44:35 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/29 19:44:39 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/02 14:13:59 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,13 @@ static int	getnumstr(char const *s, char c)
 
 char		*getnextword(char const *s, int len, char c)
 {
-	char	str[len + 2];
+	char	str[len + 1];
+	char	ch[2];
 
+	ch[0] = c;
+	ch[1] = '\0';
 	ft_strlcpy(str, s, len + 1);
-	return (ft_strtrim(str, &c));
+	return (ft_strtrim(str, ch));
 }
 
 char		**ft_split(char const *s, char c)
@@ -74,8 +77,8 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	numstr = getnumstr(s, c);
-	printf("Number of words: %i\n", numstr); // REMOVE THIS LINE
-	strarr = (char**)ft_calloc(numstr, sizeof(char*));
+	//printf("Number of words: %i\n", numstr); // REMOVE THIS LINE
+	strarr = (char**)ft_calloc(numstr + 1, sizeof(char*));
 	if (!strarr)
 		return (NULL);
 	while (numstr--)
@@ -84,7 +87,7 @@ char		**ft_split(char const *s, char c)
 		strarr[j] = getnextword(&s[start], len, c);
 		if (!strarr[j])
 			return (NULL);
-		printf("str[%i]: %s\n", numstr, strarr[j]);//REMOVE THIS LINE
+		//printf("str[%i]: %s\n", numstr, strarr[j]);//REMOVE THIS LINE
 		j++;
 		start += len;
 	}
