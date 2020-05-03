@@ -6,13 +6,13 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 15:44:35 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/05/02 14:13:59 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/02 16:54:37 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <stdio.h>  /// REMOVE THIS LINE
+
 static int	findnextsplit(char const *s, char c)
 {
 	int	i;
@@ -77,7 +77,6 @@ char		**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	numstr = getnumstr(s, c);
-	//printf("Number of words: %i\n", numstr); // REMOVE THIS LINE
 	strarr = (char**)ft_calloc(numstr + 1, sizeof(char*));
 	if (!strarr)
 		return (NULL);
@@ -87,7 +86,6 @@ char		**ft_split(char const *s, char c)
 		strarr[j] = getnextword(&s[start], len, c);
 		if (!strarr[j])
 			return (NULL);
-		//printf("str[%i]: %s\n", numstr, strarr[j]);//REMOVE THIS LINE
 		j++;
 		start += len;
 	}

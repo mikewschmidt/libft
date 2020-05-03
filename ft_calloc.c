@@ -6,20 +6,21 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/19 15:14:58 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/28 19:02:10 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/02 16:51:35 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = (void*)malloc(size * nmemb);
+	ptr = NULL;
+	ptr = (void*)malloc(size * count);
 	if (!ptr)
 		return (NULL);
-	ft_memset(ptr, 0, nmemb);
+	ft_bzero(ptr, count * size);
 	return (ptr);
 }

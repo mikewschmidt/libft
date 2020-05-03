@@ -6,7 +6,7 @@
 #    By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 20:10:33 by mschmidt          #+#    #+#              #
-#    Updated: 2020/04/28 23:22:14 by mschmidt         ###   ########.fr        #
+#    Updated: 2020/05/02 16:22:34 by mschmidt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ ft_tolower.c ft_toupper.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c  \
 ft_strtrim.c ft_substr.c      
 
 OBJ = $(SRC:.c=.o)
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -43,3 +43,6 @@ fclean: clean
 
 re:	fclean all
 
+debug:
+	 gcc $(CFLAGS) -g -fsanitize=address -c $(SRC)
+	 ar rc $(NAME) $(OBJ)
