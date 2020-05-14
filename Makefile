@@ -6,7 +6,7 @@
 #    By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/19 20:10:33 by mschmidt          #+#    #+#              #
-#    Updated: 2020/05/02 16:22:34 by mschmidt         ###   ########.fr        #
+#    Updated: 2020/05/02 18:17:29 by mschmidt         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,11 +29,6 @@ all: $(NAME)
 $(NAME):
 	gcc $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
-
-#so:
-#	gcc $(CFLAGS) -fPIC -c $(SRC)
-#	gcc -shared -o libft.so *.o
-#	ar rc $(NAME) *.o
 
 clean:
 	/bin/rm -f $(OBJ) 

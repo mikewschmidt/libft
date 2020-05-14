@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/19 15:14:58 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/05/02 16:51:35 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/02 18:54:32 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	ptr = NULL;
 	ptr = (void*)malloc(size * count);
 	if (!ptr)
 		return (NULL);
