@@ -20,7 +20,7 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*prev;
 	t_list	*head;
 
-	if (!lst)
+	if (!lst || !f || !del)
 		return (NULL);
 	temp = lst;
 	new = ft_lstnew(f(temp->content));
