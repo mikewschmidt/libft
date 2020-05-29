@@ -24,10 +24,10 @@ char		*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char*)big);
 	while (len != 0 && big[i] != '\0')
 	{
-		if (little[0] == big[i] && len >= len_lit)
+		if (*little == big[i] && len >= len_lit)
 		{
-			if (ft_strncmp(&big[i], &little[0], len_lit) == 0)
-				return ((char*)&big[i]);
+			if (ft_strncmp(big + i, little, len_lit) == 0)
+				return ((char*)big + i);
 		}
 		len--;
 		i++;
