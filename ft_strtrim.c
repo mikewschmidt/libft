@@ -39,7 +39,7 @@ char		*ft_strtrim(char const *s1, char const *set)
 	end = ft_strlen(s1) - 1;
 	while (chrcheck(s1[start], set))
 		start++;
-	while (chrcheck(s1[end], set) && start < end)
+	while (chrcheck(s1[end], set) && start <= end)
 		end--;
 	ptr = (char*)ft_calloc((end - start + 2), sizeof(char));
 	if (!ptr)
