@@ -6,7 +6,7 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/02 15:44:35 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/05/02 16:54:37 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/30 01:14:12 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ static int	getnumstr(char const *s, char c)
 	return (num);
 }
 
-char		*getnextword(char const *s, int len, char c)
+static char	*getnextword(char const *s, int len, char c)
 {
 	char	str[len + 1];
 	char	ch[2];

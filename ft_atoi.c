@@ -6,13 +6,13 @@
 /*   By: mschmidt <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/18 16:25:52 by mschmidt          #+#    #+#             */
-/*   Updated: 2020/04/29 01:06:47 by mschmidt         ###   ########.fr       */
+/*   Updated: 2020/05/30 00:43:21 by mschmidt         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	strtoi(const char *c, int sign, int len, int base)
+static int		strtoi(const char *c, int sign, int len, int base)
 {
 	int				i;
 	unsigned int	total;
@@ -38,28 +38,15 @@ static int	strtoi(const char *c, int sign, int len, int base)
 	return (sign * total);
 }
 
-int			ft_isspace(char const c)
+static int		ft_isspace(char const c)
 {
-	int		i;
-	char	space[6];
-
-	i = 0;
-	space[0] = ' ';
-	space[1] = '\t';
-	space[2] = '\n';
-	space[3] = '\v';
-	space[4] = '\f';
-	space[5] = '\r';
-	while (i < 6)
-	{
-		if (space[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
+	if ((c >= 9 && c <= 13) || c == 32)
+		return (1);
+	else
+		return (0);
 }
 
-int			ft_atoi(char const *nptr)
+int				ft_atoi(char const *nptr)
 {
 	int	i;
 	int	start;
